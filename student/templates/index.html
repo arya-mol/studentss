@@ -1,0 +1,20 @@
+{% block content %}
+<table>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Grade</th>
+    </tr>
+    {% for object in obj_list %}
+    <tr>
+        <td>{{ object.id }} </td>
+        <td>{{ object.name }} </td>
+        <td>{{ object.address }} </td>
+        <td>{{ object.email }} </td>
+        <td>{{ object.grade__code }} </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit">Upload</button>
+  </form>
+{% endblock %}
+
+{% for message in messages %}
+  {{ message }}
+{% endfor %}
+</body>
+</html>
